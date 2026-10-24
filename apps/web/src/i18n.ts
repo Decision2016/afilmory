@@ -13,7 +13,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: {
-      default: ['en'],
+      default: ['zh-CN', 'en'],
     },
     supportedLngs: currentSupportedLanguages,
     defaultNS: 'app',
@@ -22,7 +22,7 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
+      order: ['querystring', 'localStorage', 'htmlTag', 'navigator'],
       caches: ['localStorage'],
     },
     returnNull: false,

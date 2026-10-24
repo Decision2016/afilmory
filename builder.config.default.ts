@@ -1,4 +1,4 @@
-import os from 'node:os'
+import process from 'node:process'
 
 import { defineBuilderConfig, githubRepoSyncPlugin } from '@afilmory/builder'
 
@@ -6,19 +6,13 @@ import { env } from './env.js'
 
 export default defineBuilderConfig(() => ({
   storage: {
-    // "provider": "local",
-    // "basePath": "./apps/web/public/photos",
-    // "baseUrl": "/photos"
-
-    provider: 's3',
-    bucket: env.S3_BUCKET_NAME,
-    region: env.S3_REGION,
-    endpoint: env.S3_ENDPOINT,
-    accessKeyId: env.S3_ACCESS_KEY_ID,
-    secretAccessKey: env.S3_SECRET_ACCESS_KEY,
-    prefix: env.S3_PREFIX,
-    customDomain: env.S3_CUSTOM_DOMAIN,
-    excludeRegex: env.S3_EXCLUDE_REGEX,
+    provider: 'cos',
+    bucket: env.COS_BUCKET_NAME,
+    region: env.COS_REGION,
+    accessKeyId: env.COS_SECRET_ID,
+    secretAccessKey: env.COS_SECRET_KEY,
+    prefix: env.COS_PREFIX,
+    customDomain: env.COS_CUSTOM_DOMAIN,
     maxFileLimit: 1000,
     keepAlive: true,
     maxSockets: 64,
@@ -29,11 +23,11 @@ export default defineBuilderConfig(() => ({
     totalTimeoutMs: 60_000,
     retryMode: 'standard',
     maxAttempts: 3,
-    downloadConcurrency: 16,
+    downloadConcurrency: 2,
   },
   system: {
     processing: {
-      defaultConcurrency: 10,
+      defaultConcurrency: 2,
       enableLivePhotoDetection: true,
       digestSuffixLength: 8,
       xmp: {
@@ -51,9 +45,9 @@ export default defineBuilderConfig(() => ({
       },
       performance: {
         worker: {
-          workerCount: os.cpus().length * 2,
+          workerCount: 2,
           timeout: 30_000,
-          useClusterMode: true,
+          useClusterMode: false,
           workerConcurrency: 2,
         },
       },

@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/Afilmory/Afilmory"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "build": "pnpm --filter @afilmory/ssr build",
     "build:demo": "sh scripts/prepare-demo-data.sh && pnpm --filter web build",

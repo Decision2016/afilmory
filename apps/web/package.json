@@ -2,7 +2,7 @@
   "name": "@afilmory/web",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@12.3.2",
   "description": "Photo gallery SPA",
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {

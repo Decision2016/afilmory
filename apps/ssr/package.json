@@ -2,11 +2,14 @@
   "name": "@afilmory/ssr",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@12.3.2",
   "description": "Next.js SSR host and SEO for the gallery",
   "author": "Innei",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "index.js",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "build": "sh scripts/build.sh",
     "build:jpg": "node scripts/webp-to-jpg.js",
