@@ -1,51 +1,19 @@
 {
-  "name": "Innei's Afilmory",
-  "title": "Innei's Afilmory",
-  "description": "Capturing beautiful moments in life, documenting daily warmth and emotions through my lens.",
-  "url": "https://afilmory.innei.in/",
+  "name": "Solan's Gallery",
+  "title": "Solan's Gallery",
+  "description": "A few places, little moments, and whatever catches my eye.",
+  "url": "https://gallery.decision01.com",
   "accentColor": "#007bff",
-  "viewer": {
-    "regions": {
-      "accentSource": "system",
-      "labelPlacement": "edge"
-    }
-  },
   "author": {
-    "name": "Innei",
-    "url": "https://innei.in/",
-    "avatar": "https://cdn.jsdelivr.net/gh/Innei/static@master/avatar.png"
+    "name": "Solan",
+    "url": "https://decision01.com",
+    "avatar": ""
   },
   "social": {
-    "github": "",
+    "github": "https://github.com/Decision2016",
     "twitter": ""
   },
-  "feed": {
-    "folo": {
-      "challenge": {
-        "feedId": "",
-        "userId": ""
-      }
-    }
-  },
-  "map": [
-    "maplibre"
-  ],
+  "map": ["maplibre"],
   "mapStyle": "builtin",
-  "mapProjection": "mercator",
-  "beian": {
-    "icp": {
-      "enabled": false,
-      "number": "XICP备xxxxxxxx号",
-      "link": "https://beian.miit.gov.cn/"
-    },
-    "police": {
-      "enabled": false,
-      "number": "X公网安备xxxxxxxxxxxxxx号",
-      "code": "xxxxxxxxxxxxxx",
-      "icon": "https://example.com/beian.png"
-    }
-  },
-  "telemetry": {
-    "vibeloft": true
-  }
+  "mapProjection": "mercator"
 }
